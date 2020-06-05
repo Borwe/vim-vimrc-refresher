@@ -1,25 +1,31 @@
-" --------------------------------
-" Add our plugin to the path
-" --------------------------------
-python import sys
-python import vim
-python sys.path.append(vim.eval('expand("<sfile>:h")'))
+" For quick loading and avoiding recurring loading of same plugin
 
-" --------------------------------
-"  Function(s)
-" --------------------------------
-function! TemplateExample()
-python << endOfPython
+ if !exists('loaded_complete')
 
-from vim_vimrc_refresher import vim_vimrc_refresher_example
+    " --------------------------------
+    "  Variable(s)
+    " --------------------------------
+    "  g:vimrcLocation for where you store your vimrc file
+    if !exists('g:vimrcLocation')
+        let g:vimrcLocation='~/.vimrc'
+    endif
 
-for n in range(5):
-    print(vim_vimrc_refresher_example())
 
-endOfPython
-endfunction
+    " --------------------------------
+    "  Function(s)
+    " --------------------------------
+    function! RefreshVimrcFunction()
+        :exec 'edit '.g:vimrcLocation.''
+        :exec 'so %'
+        :exec 'b#'
+    endfunction()
 
-" --------------------------------
-"  Expose our commands to the user
-" --------------------------------
-command! Example call TemplateExample()
+    " --------------------------------
+    "  Expose our commands to the user
+    " --------------------------------
+    command! RefreshVimrc call RefreshVimrcFunction()
+
+
+    " mark that everything has been loaded succesfully
+    let loaded_complete='yes loaded'
+endif
