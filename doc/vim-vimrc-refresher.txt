@@ -1,0 +1,27 @@
+*vim-vimrc-refresher.txt* A short multi line description of your plugin
+
+===============================================================================
+CONTENTS                                                  *vim-vimrc-refresher*
+
+    1. Intro ...................................... |vim-vimrc-refresher-intro|
+    2. Requirements ........................ |vim-vimrc-refresher-requirements|
+    3. Usage ...................................... |vim-vimrc-refresher-usage|
+    4. Licence .................................. |vim-vimrc-refresher-licence|
+===============================================================================
+1. Intro                                            *vim-vimrc-refresher-intro*
+
+Overview of plugin
+
+2. Requirements                              *vim-vimrc-refresher-requirements*
+
+What additional programs are required to run the plugin
+
+3. Usage                                            *vim-vimrc-refresher-usage*
+
+How to use the plugin. What functions does it give the user?
+
+4. Licence                                        *vim-vimrc-refresher-licence*
+
+This is open source make sure to include a licence
+
+vim:ft=help
