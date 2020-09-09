@@ -1,6 +1,6 @@
 " For quick loading and avoiding recurring loading of same plugin
 
- if !exists('loaded_complete')
+ if !exists('loaded_vimrc_refresher')
 
     " --------------------------------
     "  Variable(s)
@@ -17,7 +17,7 @@
     function! RefreshVimrcFunction()
         :exec 'edit '.g:vimrcLocation.''
         :exec 'so %'
-        :exec 'b#'
+        :exec 'bd'
     endfunction()
 
     " --------------------------------
@@ -27,5 +27,5 @@
 
 
     " mark that everything has been loaded succesfully
-    let loaded_complete='yes loaded'
+    let loaded_vimrc_refresher='yes loaded'
 endif
