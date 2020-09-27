@@ -18,6 +18,7 @@
         :exec 'edit '.g:vimrcLocation.''
         :exec 'so %'
         :exec 'bd'
+        :exec 'bp'
     endfunction()
 
     " --------------------------------
@@ -27,5 +28,5 @@
 
 
     " mark that everything has been loaded succesfully
-    let loaded_vimrc_refresher='yes loaded'
+    "let loaded_vimrc_refresher='yes loaded'
 endif
